@@ -8,4 +8,10 @@ if __name__ == '__main__':
         if key == 'q':
             break
         elif key == 'p':
-            subprocess.run('pvs')
+            password = input("Please enter your password: ")
+            p = subprocess.Popen('ls'.split(), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            p.communicate(password.encode())
+
+            print(p.returncode)
+            print(p.stdout)
+
