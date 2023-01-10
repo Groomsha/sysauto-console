@@ -11,10 +11,10 @@ def is_root() -> None:
         elevate(graphical=False)
 
 def cmd_command(command:str) -> Dict:
-    cmd = subprocess.run(command.split(), shell=True, encoding='utf-8', 
-        stdout=subprocess.PIPE, 
+    cmd = subprocess.run(command.split(), shell=True, encoding='utf-8',
+        stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
-    
+
     return {'returncode': cmd.returncode,
             'stdout': cmd.stdout,
             'stderr': cmd.stderr}
@@ -36,6 +36,4 @@ if __name__ == '__main__':
             case 'p': current_menu = cmd_menu.physical_menu()
             case 'l': current_menu = cmd_menu.logical_menu()
             case 'r': current_menu = cmd_menu.main_menu()
-            case 'q': break 
-    
-        
+            case 'q': break
