@@ -10,10 +10,11 @@ def is_root() -> None:
     if os.getuid() != 0:
         elevate(graphical=False)
 
-def cmd_command(command:str) -> Dict:
+
+def cmd_command(command: str) -> Dict:
     cmd = subprocess.run(command.split(), shell=True, encoding='utf-8',
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE)
+                         stdout=subprocess.PIPE,
+                         stderr=subprocess.PIPE)
 
     return {'returncode': cmd.returncode,
             'stdout': cmd.stdout,
