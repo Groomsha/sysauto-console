@@ -1,9 +1,10 @@
 import os
 import subprocess
 from typing import Dict
+
 from elevate import elevate
 
-from lvm_menu import LVM_menu
+from lvm_menu import LVMMenu
 
 
 def is_root() -> None:
@@ -22,8 +23,8 @@ def cmd_command(command: str) -> Dict:
 
 
 if __name__ == '__main__':
-    cmd_menu = LVM_menu()
-    current_menu = cmd_menu.main_menu()
+    cmd_menu: LVMMenu = LVMMenu()
+    current_menu: str = cmd_menu.main_menu()
 
     # is_root()
 
@@ -31,7 +32,7 @@ if __name__ == '__main__':
         subprocess.run(['clear'], shell=True)
         print('Utility for Fast Configuration of LVM v0.3')
 
-        key = input(f"{current_menu}\nPlease Select Menu: ").lower()
+        key: str = input(f"{current_menu}\nPlease Select Menu: ").lower()
 
         match key:
             case 'p': current_menu = cmd_menu.physical_menu()

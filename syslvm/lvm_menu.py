@@ -1,7 +1,7 @@
-class LVM_menu:
+class LVMMenu:
     def __init__(self) -> None:
         pass
-    
+
     @staticmethod
     def main_menu() -> str:
         return """
@@ -27,4 +27,3 @@ class LVM_menu:
         D - Logical Volume Remove
         R - Return
         Q - Exit\n"""
-    
