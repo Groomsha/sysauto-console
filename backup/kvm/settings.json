@@ -1,0 +1,11 @@
+{
+    "type": 1,
+    "name_obj": "srv4prod-vm",
+    "dir_logs": "/var/log/",
+    "dir_obj": "/dev/vg0/prod-vm",
+    "dir_backup": "/var/backup/prod-vm/",
+    "backup_folder": "/var/backup/prod-vm/srv4prod-vm_01.01.2077/",
+    "compression": 3,
+    "size_snap": 2,
+    "number_archives": 2
+}
